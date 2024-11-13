@@ -1,3 +1,4 @@
+/* this was just a test to see if the code in the power point worked on my laptop in order to figure out what the issue I was having was and whether it was with my javascript or something else */
 function setCookie(cookieKey, cookieValue, exdays) {
     const cookieDate = new Date();
     const expiryDaysInMs = exdays * 24 * 60 * 60 * 1000;

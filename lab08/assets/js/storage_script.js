@@ -1,3 +1,4 @@
+/* this bit of code sets how long the cookies will last for*/
 function setCookie(cookieKey, cookieValue, exdays) {
     const cookieDate = new Date();
     const expiryDaysInMs = exdays * 24 * 60 * 60 *1000;
@@ -6,9 +7,12 @@ function setCookie(cookieKey, cookieValue, exdays) {
     document.cookie = cookieKey + "=" + cookieValue + ";" + expires + ";path=/";
 
 }
+
+/*this is for the click counter and saves clicks to local storage */ 
 let i = 0;
 window.localStorage.setItem('clickCount', i);
 setCookie("clickCount","0" , 1 );
+
 
 function getCookie(cookieKey) {
     let name = cookieKey + "=";
@@ -27,7 +31,7 @@ function getCookie(cookieKey) {
     
 getCookie("clickCount");
 
-
+/* this is also for click counting*/
 function countClicks(){
     let clickCount = parseInt(window.localStorage.getItem ("clickCount"));
     clickCount += 1;
